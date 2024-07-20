@@ -64,4 +64,4 @@ Below is an ongoing project in conjunction with university class.
 
 I like solving Algorithm Problems. [(repo)](https://github.com/blu3piece/boj-solution).
 
-<img align="center" src="http://mazassumnida.wtf/api/v2/generate_badge?boj=blu3fishez">
+<img align="center" alt="solved-ac-ps-skill" src="http://mazassumnida.wtf/api/v2/generate_badge?boj=blu3fishez">
