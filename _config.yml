@@ -16,7 +16,7 @@ timezone:
 
 title: blu3piece blog # the main title
 
-tagline: The changes comes to someone makes the log. # it will display as the sub-title
+tagline: The changes come to someone makes the log. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
