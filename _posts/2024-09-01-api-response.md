@@ -31,7 +31,7 @@ API 응답과 요청 과정에서의 오버헤드는 얼마나 성능에 영향�
 
 실제 노션 API 를 통해서 노션 페이지를 제 개인 깃허브 페이지로 배포해보려고 예전에 잠깐 찾아봤었는데 (물론 완전히 해보진 못했지만..) 노션에서는 페이지를 불러올 때 각 블락단위로 불러오고, 이때 이미지의 경우 이것을 하나의 “파일” 취급합니다. 노션에서는 파일 블록에는 별도의 url 참조만 올려놓습니다.
 
-[File](https://developers.notion.com/reference/file-object)
+[노션 파일 링크](https://developers.notion.com/reference/file-object)
 
 전체 블락을 가져오게 되면 모든 페이지의 내용이 구현되어야하지만, 최근 슬랙에서 다른 동료 캠퍼분께서 이미지만 로딩이 안되는 현상을 보셨을 겁니다. 사실 이러한 현상은 이미지가 별도의 파일로 취급되기 때문에, 블락은 불러와지고, 이미지와 연결된 파일의 `url` 을 통해 불러오는 것에 실패했기 때문입니다.
 
@@ -51,14 +51,9 @@ _"요청 응답 헤더가 포함되어서 오버헤드가 커져서 그래요"_ 
 
 사실 두번째에 관한 실험을 제대로 진행해볼 순 없었는데, 혹시 알고있는 분이 있다면 댓글로 정보공유해주시면 감사하겠습니다.
 
-<aside>
-💡
-
-실제로 스프링부트를 사용하다가 응답 바디가 큰 경우 중간에 패킷로스로 인해서 다시 보내야하는 경우가 있다고 한다.
-
-[Data loss when calling a HTTP request with huge response body in Spring Boot](https://stackoverflow.com/questions/77220948/data-loss-when-calling-a-http-request-with-huge-response-body-in-spring-boot)
-
-</aside>
+> 실제로 스프링부트를 사용하다가 응답 바디가 큰 경우 중간에 패킷로스로 인해서 다시 보내야하는 경우가 있다고 한다.
+>
+> [Data loss when calling a HTTP request with huge response body](https://stackoverflow.com/questions/77220948/data-loss-when-calling-a-http-request-with-huge-response-body-in-spring-boot)
 
 하지만 이런 것도 직접 실험을 해보고 원인을 찾아보는게 의미 있다고 생각합니다. 그래서 주말에 남는 시간에 직접 실험을 해보았고, 배울 점들을 많이 발견할 수 있었던 것 같습니다.
 
@@ -74,7 +69,7 @@ _"요청 응답 헤더가 포함되어서 오버헤드가 커져서 그래요"_ 
 
 일단, IPv4 데이터 패킷이 `65535Byte` 이므로, 64KB 가 넘는 JSON 파일이 필요했습니다. 마침 구글링을 해보니까 실제로 크기에 따른 JSON 파일들을 제공해주는 사이트가 있었습니다. 다른분들도 필요하시면 참고하면 좋을 것 같습니다.
 
-![해당 파일로 진행](/assets/imagesimage.png)
+![해당 파일로 진행](/assets/images/image.png)
 
 해당 파일로 진행
 
@@ -88,7 +83,7 @@ _"요청 응답 헤더가 포함되어서 오버헤드가 커져서 그래요"_ 
 
 Postman 사용방법은 정말 간단합니다.
 
-![image.png](/assets/imagesimage%201.png)
+![image.png](/assets/images/image%201.png)
 
 메인 화면에 요청 방식을 선택하고, 요청 주소를 쓰면 끝입니다.
 
@@ -96,11 +91,11 @@ Postman 사용방법은 정말 간단합니다.
 
 요청 body 는 Body 항목에 이런식으로 입력하면 됩니다.
 
-![image.png](/assets/imagesimage%202.png)
+![image.png](/assets/images/image%202.png)
 
 또 HTTP 뿐만 아니라, 웹소켓, GraphQL 등의 요청도 보낼 수 있는 것 같습니다. 여러모로 유용할 것 같습니다!
 
-![image.png](/assets/imagesimage%203.png)
+![image.png](/assets/images/image%203.png)
 
 ## 실험 과정
 
@@ -112,11 +107,11 @@ Postman 사용방법은 정말 간단합니다.
 
 - `10mb` 요청 → 총 트래픽 `9.81mb`, 소요시간 `110ms ~ 86ms` 까지 내려감
 
-![image.png](/assets/imagesimage%204.png)
+![image.png](/assets/images/image%204.png)
 
 - `20mb` → 총 트래픽 `19.44mb`, 소요시간 `211ms ~ 155ms` 까지 내려감
 
-![image.png](/assets/imagesimage%205.png)
+![image.png](/assets/images/image%205.png)
 
 ### API 실험 결과
 
@@ -146,13 +141,13 @@ Postman 사용방법은 정말 간단합니다.
 
 TCP 연결은 IP가 데이터를 어디로 보낼지 처리한다면, TCP는 패킷이 제대로 전달되었는지 확인을 합니다. 일반적으로 연결형 서비스에서 TCP를 자주 사용하게 되는데, 위 링크에 따르면 3-way handshaking을 통해 연결을 설정하고, 4-way handshaking 을 통해서 연결을 해제한다고 합니다.
 
-![연결을 수립하는데 세번의 데이터 요청을 주고받기 때문에 3-way handshaking](/assets/imagesimage%206.png)
+![연결을 수립하는데 세번의 데이터 요청을 주고받기 때문에 3-way handshaking](/assets/images/image%206.png)
 
 연결을 수립하는데 세번의 데이터 요청을 주고받기 때문에 3-way handshaking
 
 아래의 사진은 구글 서버에 직접 GET 요청을 보낸 결과입니다. 구글 서버와 같이 로컬보다 경로가 더 길어진 경우 TCP 핸드셰이킹 과정에서 드는 시간이 더욱 커집니다. 이것이 진짜 API 요청에 영향을 주는 핵심이고, API 요청은 클라이언트의 작업 요청에 따라 분리해야하는 원인입니다.
 
-![구글에  GET 요청을 보낸 결과. 확실히 TCP 핸드셰이킹 과정이 엄청 길어졌다.](/assets/imagesimage%207.png)
+![구글에  GET 요청을 보낸 결과. 확실히 TCP 핸드셰이킹 과정이 엄청 길어졌다.](/assets/images/image%207.png)
 
 구글에 GET 요청을 보낸 결과. 확실히 TCP 핸드셰이킹 과정이 엄청 길어졌다.
 
