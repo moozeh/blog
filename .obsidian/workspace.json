@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "255eb272052a805b",
+    "type": "split",
+    "children": [
+      {
+        "id": "72d1a86fa3a12ec9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cbf4980a79400824",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_templates/template.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "template"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cffe61e73f441e7a",
+    "type": "split",
+    "children": [
+      {
+        "id": "257f8c7d1d7defac",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "91d53a938dfefd57",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "91843723f69cef4a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "efb5e9b050c2de94",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "943b7d554968b266",
+    "type": "split",
+    "children": [
+      {
+        "id": "afb28fb5f0f2bd55",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2e4456c889ed15b5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_templates/template.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "template의 백링크"
+            }
+          },
+          {
+            "id": "f3e887c50dab0756",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_templates/template.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "template의 나가는 링크"
+            }
+          },
+          {
+            "id": "a13f88969b3899ae",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e9793214e2b7b3a8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_templates/template.md"
+              },
+              "icon": "lucide-list",
+              "title": "template 개요"
+            }
+          },
+          {
+            "id": "cb4c6cd4295d6426",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "cbf4980a79400824",
+  "lastOpenFiles": [
+    "_posts/2024-10-23-안녕하세요.md",
+    "_templates/template.md",
+    "_templates/template.md.md",
+    "_posts/2024-10-23-ㅎㅇ.md",
+    "_site/posts/ㅎㅇ/index.html",
+    "_site/posts/ㅎㅇ",
+    "_posts/2024-10-06-tls-https.md",
+    "_posts/무제 파일.md",
+    "_site/posts/tls-https/index.html",
+    "_site/posts/tls-https",
+    "_site/posts/api-response/index.html",
+    "_site/posts/api-response",
+    "_site/posts/boostcamp-3/index.html",
+    "_site/posts/boostcamp-3",
+    "_site/posts/boostcamp-1/index.html",
+    "_site/posts/boostcamp-1",
+    "_site/assets/images/image.png",
+    "_site/assets/images/image 7.png",
+    "_site/assets/images/image 6.png",
+    "_site/assets/images/image 5.png",
+    "_site/assets/images/image 4.png",
+    "_site/assets/images/image 3.png",
+    "_site/assets/images/image 2.png",
+    "_site/assets/images/image 1.png",
+    "_site/assets/2024-10-06-tls-https/image.png",
+    "assets/images/image 3.png",
+    "_posts/2024-10-23-perplexity-ai-를-이용하여-블로그-설정-바꾸기.md",
+    "_posts/2024-09-01-api-response.md",
+    "_posts/2024-08-03-boostcamp-3.md",
+    "_posts/2024-07-20-boostcamp-1.md",
+    "README.md"
+  ]
+}
