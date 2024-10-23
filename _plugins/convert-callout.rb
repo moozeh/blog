@@ -1,27 +1,55 @@
-# _plugins/obsidian_converter.rb
-
 Jekyll::Hooks.register :posts, :pre_render do |post|
   def convert_callouts(content)
-    # Obsidian callout 패턴 매칭
-    content.gsub(/>\s*\[!(.*?)\]\s*(.*?)\n((?:>.*?\n)*)/) do |match|
-      type = $1.downcase
-      title = $2
-      body = $3.gsub(/^>\s?/, '')  # '>' 제거
+    lines = content.split("\n")
+    result = []
+    in_callout = false
+    current_callout = []
 
-      # Chirpy 스타일로 변환
-      case type
-      when 'note'
-        "{: .prompt-info }\n> **#{title}**\n> #{body}"
-      when 'warning'
-        "{: .prompt-warning }\n> **#{title}**\n> #{body}"
-      when 'danger'
-        "{: .prompt-danger }\n> **#{title}**\n> #{body}"
-      when 'tip'
-        "{: .prompt-tip }\n> **#{title}**\n> #{body}"
+    lines.each do |line|
+      # 콜아웃 시작 라인 매칭
+      if match = line.match(/^\s*>\s*\[!(\w+)\]\s*(.+)$/)
+        in_callout = true
+        type = match[1].downcase
+        title = match[2]
+
+        # prompt 타입 결정
+        prompt_type = case type
+                      when 'note' then 'info'
+                      when 'warning' then 'warning'
+                      when 'danger' then 'danger'
+                      when 'tip' then 'tip'
+                      else 'info'
+                      end
+
+        current_callout = ["{: .prompt-#{prompt_type}}", "> **#{title}**", ">"]
+        next
+      end
+
+      if in_callout
+        if line.start_with?('>')
+          # 빈 콜아웃 라인 처리
+          if line.match?(/^\s*>\s*$/)
+            current_callout << ">"
+          else
+            # 콜아웃 내용 처리
+            content_line = line.sub(/^\s*>\s?/, '').rstrip
+            current_callout << "> #{content_line}"
+          end
+        else
+          # 콜아웃 종료
+          in_callout = false
+          result.concat(current_callout)
+          result << line
+        end
       else
-        "{: .prompt-info }\n> **#{title}**\n> #{body}"
+        result << line
       end
     end
+
+    # 마지막 콜아웃 처리
+    result.concat(current_callout) if in_callout
+
+    result.join("\n")
   end
 
   post.content = convert_callouts(post.content)
