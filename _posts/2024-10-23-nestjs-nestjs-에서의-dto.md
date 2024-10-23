@@ -1,9 +1,14 @@
 ---
 title: "[Nest.js] Nest.js 에서의 DTO"
 date: 2024-10-23 18:46:23 +0900
-categories: [Backend, Nestjs]
-tags: [Backend, Nestjs]
+categories:
+  - Backend
+  - Nestjs
+tags:
+  - Backend
+  - Nestjs
 author: 2024-10-23
+image: /assets/img/nest-js-image.png
 ---
 
 ## DTO 란?
@@ -32,22 +37,3 @@ DTO의 역할은 크게 두가지 이다.
 
 여러 계층에서 여러개의 데이터를 보내는 형식이 될 때 이를 하나의 객체로 정의하여 프로퍼티의 변경이 필요할 때,
 여러 계층에서 수정해야할 때 되게 귀찮은데, 이 문제를 해결해줄 수 있다.
-
-> [!note] 내가 이전에 배웠던 점과의 차이
->
-> 이전에 내가 공부하기를 엔티티와 대응시켜 DB와 분리하는 쪽으로 DTO를 구현했지만,
-> 
-> 실제로 메서드마다 사용하는 DTO를 따로 정의할 수도 있다. 굳이 하나만 만들 필요는 없단 점을 생각 못했다.
-> 즉, 하나의 모듈(도메인) 내에서 DTO를 꼭 하나로 통일할 필요가 없다.
-
-## DTO 사용하기 예시
-
-DTO 자체도 단순히 모델을 정의하듯이 정의하면 된다.
-
-```ts
-// create-board.dto.ts
-export class CreateBoardDto {
-    title: string;
-    description: string;
-}
-```
