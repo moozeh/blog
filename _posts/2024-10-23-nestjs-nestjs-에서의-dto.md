@@ -7,7 +7,7 @@ categories:
 tags:
   - Backend
   - Nestjs
-author: 2024-10-23
+author: 
 image: /assets/img/nest-js-image.png
 ---
 
