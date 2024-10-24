@@ -1,23 +1,18 @@
 Jekyll::Hooks.register :posts, :pre_render do |post|
-  doc = post.content
-  # 이미지 크기 조정 문법 매칭 (탭이나 공백을 포함한 패턴)
-  matches = doc.scan(/!\[\[(.*?)\s*\|?\s*(\d*)\]\]/)
-  matches.each do |match|
-    file_name = match[0]
-    size = match[1]
+  def convert_image_syntax(content)
+    # 이미지 패턴 매칭 개선
+    content.gsub(/!\[\[(.*?)\|?(\d*)\]\]/) do |match|
+      file_name = $1.strip
+      size = $2.strip
 
-    if size.empty?
-      # 크기가 지정되지 않은 경우
-      post.content = doc.gsub(
-        "![[#{file_name}]]",
+      if size.empty?
         "![#{file_name}](/assets/img/#{file_name})"
-      )
-    else
-      # 크기가 지정된 경우
-      post.content = doc.gsub(
-        /!\[\[#{Regexp.escape(file_name)}\s*\|\s*#{size}\]\]/,
+      else
         "![#{file_name}](/assets/img/#{file_name}){: width=\"#{size}px\"}"
-      )
+      end
     end
   end
+
+  # 변환된 내용을 post.content에 적용
+  post.content = convert_image_syntax(post.content)
 end
