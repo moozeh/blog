@@ -122,7 +122,7 @@ comments:
     repo: blu3piece/blu3piece.github.io # <gh-username>/<repo>
     repo_id: R_kgDOMY8YHA
     category: Announcements
-    category_id:
+    category_id: DIC_kwDOMY8YHM4Cjno8
     mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: top # optional, default to 'bottom'
