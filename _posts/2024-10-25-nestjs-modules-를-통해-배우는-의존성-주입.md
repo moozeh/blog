@@ -1,9 +1,13 @@
 ---
-title: "Nest.js Modules 를 통해 배우는 의존성 주입"
+title: Nest.js Modules 를 통해 배우는 의존성 주입
 date: 2024-10-25 12:10:38 +0900
-categories: [Backend, Nestjs]
-tags: [Nestjs]
+categories:
+  - Backend
+  - Nestjs
+tags:
+  - Nestjs
 author: 2024-10-25
+image: /assets/img/nest-js-image.png
 ---
 > [!important]
 > 
