@@ -1524,3 +1524,18 @@ search {
     }
   }
 } /* min-width: 1650px */
+
+/* important prompt style */
+
+.prompt-important {
+  background-color: #7952b3;  // 보라색 계열
+  border-left-color: #563d7c;
+  color: #fff;
+
+  &::before {
+    content: "\f005";  // star 아이콘
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    line-height:1;
+  }
+}

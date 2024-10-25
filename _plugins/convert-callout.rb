@@ -7,10 +7,10 @@ Jekyll::Hooks.register :posts, :pre_render do |post|
 
     lines.each do |line|
       # 콜아웃 시작 라인 매칭
-      if match = line.match(/^\s*>\s*\[!(\w+)\]\s*(.+)$/)
+      if match = line.match(/^\s*>\s*\[!(\w+)\](?:\s*(.+))?$/)
         in_callout = true
         type = match[1].downcase
-        title = match[2]
+        title = match[2] || type.capitalize
 
         # prompt 타입 결정
         prompt_type = case type
@@ -18,6 +18,7 @@ Jekyll::Hooks.register :posts, :pre_render do |post|
                       when 'warning' then 'warning'
                       when 'danger' then 'danger'
                       when 'tip' then 'tip'
+                      when 'important' then 'important'  # 추가
                       else 'info'
                       end
 
