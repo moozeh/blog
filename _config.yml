@@ -207,6 +207,15 @@ compress_html:
     envs: [development]
 
 exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - pnpm-lock.yaml
   - "*.gem"
   - "*.gemspec"
   - docs

@@ -48,7 +48,7 @@ jobs:
           path: |
             _site
             .jekyll-cache
-          key: ${{ runner.os }}-jekyll-${{ hashFiles('**/*.md', '**/*.html', '**/_data/**', '**/_config.yml') }}
+          key: ${{ runner.os }}-jekyll-${{ hashFiles('**/_posts/**', '_config.yml') }}
           restore-keys: |
             ${{ runner.os }}-jekyll-
 
