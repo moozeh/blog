@@ -11,13 +11,14 @@
             "id": "52baa4241fb29dd9",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "_posts/2024-10-26-network-127001-과-localhost-의-차이.md",
-                "staged": false
+                "file": "_posts/2024-10-26-도커-네트워크-인터페이스를-알아보자.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "git-pull-request",
-              "title": "Diff View (2024-10-26-network-127001-과-localhost-의-차이)"
+              "icon": "lucide-file",
+              "title": "2024-10-26-도커-네트워크-인터페이스를-알아보자"
             }
           }
         ]
@@ -172,7 +173,7 @@
   },
   "active": "cb4c6cd4295d6426",
   "lastOpenFiles": [
-    "_posts/2024-10-26-network-127001-과-localhost-의-차이.md",
+    "_posts/2024-10-26-도커-네트워크-인터페이스를-알아보자.md",
     "_site/assets/img/2024-10-26-network-127001-과-localhost-의-차이-20241026203002567.webp",
     "_site/assets/img/2024-10-26-network-127001-과-localhost-의-차이-20241026203012215.webp",
     "_site/assets/img/2024-10-26-network-127001-과-localhost-의-차이-20241026203010465.webp",
