@@ -6,8 +6,8 @@ categories:
   - Nestjs
 tags:
   - Nestjs
-author: 2024-10-25
-image: /assets/img/nest-js-image.png
+author: 
+image: assets/img/nest-js-image.png
 ---
 > [!important]
 > 
@@ -56,6 +56,7 @@ Express 를 배우고, 보다 좀 더 정형화된 형식이 필요함을 느꼈
 	- 예를들어, `Nest` 에서 `@Injectable` 데코레이터 인자로 `scope` 값을 `REQUEST` 범위를 설정하면, 각 요청마다 새로운 인스턴스가 생성된다고도 한다.
 1. 생명 주기 관리
 	- Nest.js 에서는 실제로 생성을 싱글턴으로 할게 아니라, 해당 클래스가 언제 종료되고 새롭게 재생성할 수 있을지까지 별도로 관리할 수 있을 것이다.
+
 ## 🐈‍⬛ Nest의 의존성 주입 방식
 
 그런데, 나는 여기서 이상하게 생각했다.

@@ -1,7 +1,6 @@
 <%*
 // 사용자 입력 받기
 const title = await tp.system.prompt("제목을 입력하세요");
-const categories = await tp.system.prompt("카테고리를 입력하세요 (쉼표로 구분)");
 const tags = await tp.system.prompt("태그를 입력하세요 (쉼표로 구분)");
 
 // 파일명 생성 및 변경
@@ -15,6 +14,15 @@ const tagArray = tags.split(",").map(item => item.replace(/\s|\./g, '').trim());
 ---
 title: <% `"${title}"` %>
 date: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %> +0900
-categories: [<% categoryArray.join(", ") %>]
+categories: [Backjoon]
 tags: [<% tagArray.join(", ") %>]
+image: /assets/img/backjoon-thumbnail.webp
 ---
+
+## 문제 제목
+
+## 해결 과정
+
+
+## 소스 코드
+

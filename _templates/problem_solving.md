@@ -16,5 +16,15 @@ const tagArray = tags.split(",").map(item => item.replace(/\s|\./g, '').trim());
 title: <% `"${title}"` %>
 date: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %> +0900
 categories: [<% categoryArray.join(", ") %>]
-tags: [<% tagArray.join(", ") %>]
+tags: [Problems,<% tagArray.join(", ") %>]
+image: /assets/img/problem-solve-thumbnail.webp
 ---
+
+
+## 문제 상황 
+
+
+## 접근 방법 
+
+
+## 해결 과정
