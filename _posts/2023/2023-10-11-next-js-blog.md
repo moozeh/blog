@@ -29,11 +29,11 @@ import Head from 'next/head'
 
 그런데 알고보니 이게 app router 에서는 이렇게 사용하지 않는다고 한다.
 
-![Alt text](assets/img/image.png)
+![Alt text](/assets/img/image.png)
 
 해결방법은 아래와 같이 Metadata 값을 재정의 해주는 것만으로 새롭게 바뀌는 가보다. 작동방식이 상당히 특이하다. 아마 해당 Functional Component의 default export 값만 보는게 아닌 것 같다.
 
-![Alt text](image-1.png)
+![Alt text](/assets/img/image-1.png)
 
 ## Typescript on React : 자식 설정
 

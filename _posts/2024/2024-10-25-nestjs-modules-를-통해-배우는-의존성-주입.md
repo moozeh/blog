@@ -7,7 +7,7 @@ categories:
 tags:
   - Nestjs
 author: 
-image: assets/img/nest-js-image.png
+image: /assets/img/nest-js-image.png
 ---
 > [!important]
 > 

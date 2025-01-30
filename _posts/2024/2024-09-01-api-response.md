@@ -69,7 +69,7 @@ _"요청 응답 헤더가 포함되어서 오버헤드가 커져서 그래요"_ 
 
 일단, IPv4 데이터 패킷이 `65535Byte` 이므로, 64KB 가 넘는 JSON 파일이 필요했습니다. 마침 구글링을 해보니까 실제로 크기에 따른 JSON 파일들을 제공해주는 사이트가 있었습니다. 다른분들도 필요하시면 참고하면 좋을 것 같습니다.
 
-![해당 파일로 진행](/assets/images/image.png)
+![해당 파일로 진행](/assets/img/image_123133.png)
 
 해당 파일로 진행
 
@@ -83,7 +83,7 @@ _"요청 응답 헤더가 포함되어서 오버헤드가 커져서 그래요"_ 
 
 Postman 사용방법은 정말 간단합니다.
 
-![image.png](/assets/images/image%201.png)
+![image.png](/assets/img/image%201.png)
 
 메인 화면에 요청 방식을 선택하고, 요청 주소를 쓰면 끝입니다.
 
@@ -91,11 +91,11 @@ Postman 사용방법은 정말 간단합니다.
 
 요청 body 는 Body 항목에 이런식으로 입력하면 됩니다.
 
-![image.png](/assets/images/image%202.png)
+![image.png](/assets/img/image%202.png)
 
 또 HTTP 뿐만 아니라, 웹소켓, GraphQL 등의 요청도 보낼 수 있는 것 같습니다. 여러모로 유용할 것 같습니다!
 
-![image.png](/assets/images/image%203.png)
+![image.png](/assets/img/image%203.png)
 
 ## 실험 과정
 
@@ -107,11 +107,11 @@ Postman 사용방법은 정말 간단합니다.
 
 - `10mb` 요청 → 총 트래픽 `9.81mb`, 소요시간 `110ms ~ 86ms` 까지 내려감
 
-![image.png](/assets/images/image%204.png)
+![image.png](/assets/img/image%204.png)
 
 - `20mb` → 총 트래픽 `19.44mb`, 소요시간 `211ms ~ 155ms` 까지 내려감
 
-![image.png](/assets/images/image%205.png)
+![image.png](/assets/img/image%205.png)
 
 ### API 실험 결과
 
@@ -141,13 +141,13 @@ Postman 사용방법은 정말 간단합니다.
 
 TCP 연결은 IP가 데이터를 어디로 보낼지 처리한다면, TCP는 패킷이 제대로 전달되었는지 확인을 합니다. 일반적으로 연결형 서비스에서 TCP를 자주 사용하게 되는데, 위 링크에 따르면 3-way handshaking을 통해 연결을 설정하고, 4-way handshaking 을 통해서 연결을 해제한다고 합니다.
 
-![연결을 수립하는데 세번의 데이터 요청을 주고받기 때문에 3-way handshaking](/assets/images/image%206.png)
+![연결을 수립하는데 세번의 데이터 요청을 주고받기 때문에 3-way handshaking](/assets/img/image%206.png)
 
 연결을 수립하는데 세번의 데이터 요청을 주고받기 때문에 3-way handshaking
 
 아래의 사진은 구글 서버에 직접 GET 요청을 보낸 결과입니다. 구글 서버와 같이 로컬보다 경로가 더 길어진 경우 TCP 핸드셰이킹 과정에서 드는 시간이 더욱 커집니다. 이것이 진짜 API 요청에 영향을 주는 핵심이고, API 요청은 클라이언트의 작업 요청에 따라 분리해야하는 원인입니다.
 
-![구글에  GET 요청을 보낸 결과. 확실히 TCP 핸드셰이킹 과정이 엄청 길어졌다.](/assets/images/image%207.png)
+![구글에  GET 요청을 보낸 결과. 확실히 TCP 핸드셰이킹 과정이 엄청 길어졌다.](/assets/img/image%207.png)
 
 구글에 GET 요청을 보낸 결과. 확실히 TCP 핸드셰이킹 과정이 엄청 길어졌다.
 
