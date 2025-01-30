@@ -40,6 +40,18 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Assets
+        run: npm run build
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
