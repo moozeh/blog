@@ -1,9 +1,13 @@
 ---
-title: "Spring Boot 시작하기"
+title: Spring Boot 시작하기
 date: 2025-01-26T00:50:17+09:00
-tags: [Spring, SpringBoot]
-categories: [Spring]
+tags:
+  - Spring
+  - SpringBoot
+categories:
+  - Spring
 draft: true
+image: /assets/img/template_spring-20250130224900580.webp
 ---
 <!-- truncate -->
 

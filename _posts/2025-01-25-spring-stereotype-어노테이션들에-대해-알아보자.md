@@ -1,8 +1,11 @@
 ---
-title: "Spring Stereotype 어노테이션들에 대해 알아보자"
+title: Spring Stereotype 어노테이션들에 대해 알아보자
 date: 2025-01-25T16:58:09+09:00
-tags: [Spring ]
-categories: [Spring]
+tags:
+  - Spring
+categories:
+  - Spring
+image: /assets/img/template_spring-20250130224900580.webp
 ---
 <!-- truncate -->
 

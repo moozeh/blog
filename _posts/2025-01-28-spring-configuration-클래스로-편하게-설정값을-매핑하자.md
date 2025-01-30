@@ -1,8 +1,11 @@
 ---
-title: "Spring Configuration 클래스로 편하게 설정값을 매핑하자"
+title: Spring Configuration 클래스로 편하게 설정값을 매핑하자
 date: 2025-01-28T16:56:25+09:00
-tags: [Spring, Configuration]
+tags:
+  - Spring
+  - Configuration
 draft: true
+image: /assets/img/template_spring-20250130224900580.webp
 ---
 <!-- truncate -->
 

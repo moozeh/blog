@@ -8,6 +8,7 @@ tags:
   - Spring
   - Database
 draft: true
+image: /assets/img/template_spring-20250130224900580.webp
 ---
 ## OSIV 란?
 
