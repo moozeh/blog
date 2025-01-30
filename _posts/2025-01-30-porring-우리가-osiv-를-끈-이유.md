@@ -7,7 +7,7 @@ tags:
   - Java
   - Spring
   - Database
-draft: "true"
+draft: true
 ---
 ## OSIV 란?
 
