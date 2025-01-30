@@ -17,4 +17,7 @@ title: <% `"${title}"` %>
 date: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %> +0900
 categories: [<% categoryArray.join(", ") %>]
 tags: [<% tagArray.join(", ") %>]
+draft: true
 ---
+
+<!-- draft 값을 false 혹은 제거해야 게시됩니다!!! -->
