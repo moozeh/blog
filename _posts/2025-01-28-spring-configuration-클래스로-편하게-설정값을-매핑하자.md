@@ -1,6 +1,9 @@
 ---
-title: Spring Configuration 클래스로 편하게 설정값을 매핑하자
+title: "[Spring] Spring Configuration 클래스로 편하게 설정값을 매핑하자"
 date: 2025-01-28T16:56:25+09:00
+categories:
+  - Backend
+  - Spring
 tags:
   - Spring
   - Configuration

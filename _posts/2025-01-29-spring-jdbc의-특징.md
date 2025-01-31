@@ -1,11 +1,12 @@
 ---
-title: Spring JDBC의 특징
+title: "[Spring] Spring JDBC의 특징"
 date: 2025-01-29T13:35:24+09:00
 tags:
   - Spring
   - Database
   - JDBC
 categories:
+  - Backend
   - Spring
 image: /assets/img/template_spring-20250130224900580.webp
 ---

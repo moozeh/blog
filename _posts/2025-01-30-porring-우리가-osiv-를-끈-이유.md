@@ -2,7 +2,8 @@
 title: "[Porring] 우리가 OSIV 를 끈 이유"
 date: 2025-01-30 19:35:55 +0900
 categories:
-  - Spring
+  - Projects
+  - Porring
 tags:
   - Java
   - Spring
