@@ -9,10 +9,13 @@ categories:
   - Backend
   - Spring
 image: /assets/img/template_spring-20250130224900580.webp
+excerpt_separator: "<!-- more -->"
 ---
 <!-- truncate -->
 
 마인크래프트 플러그인을 만들면서 기존 `JDBC` 를 썼다. 그런데, `Spring JDBC` 와는 무슨 차이일까. 그 차이점을 알아보자.
+
+<!-- more -->
 
 ## JDBC란
 

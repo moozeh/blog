@@ -5,6 +5,8 @@ vendor
 # Jekyll cache
 .jekyll-cache
 .jekyll-metadata
+
+Gemfile.lock
 _site
 
 # RubyGems
@@ -14,6 +16,8 @@ _site
 node_modules
 package-lock.json
 .husky
+
+
 
 # IDE configurations
 .idea

@@ -30,7 +30,7 @@ Here are some ideas to get you started:
 
 I am CS Student live in South Korea.
 
-[![blu3piece's GitHub stats](https://github-readme-stats.vercel.app/api?username=blu3piece&theme=dark)](https://github.com/blu3piece/markdown-blog)
+[![blu3piece's GitHub stats](https://github-readme-stats.vercel.app/api?username=blu3piece&theme=dark)](https://github.com/blu3piece/markdown-blog)
 
 ### Things currently working on
 
