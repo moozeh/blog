@@ -9,6 +9,7 @@ tags:
   - JPA
 excerpt_separator: <!-- more -->
 draft: false
+image: /assets/img/template_spring-20250130224900580.webp
 ---
 
 `Type` 을 정의하는 테이블을 정의해서 매핑하는데, Entity 와 ManyToOne을 쓰면 적절하지 않을 것 같았다.
