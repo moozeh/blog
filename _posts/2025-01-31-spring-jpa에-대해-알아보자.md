@@ -1,5 +1,5 @@
 ---
-title: "[Spring] JPA에 대해 알아보자"
+title: "[Spring JPA] JPA에 대해 알아보자"
 date: 2025-01-31 22:39:35 +0900
 categories:
   - Backend

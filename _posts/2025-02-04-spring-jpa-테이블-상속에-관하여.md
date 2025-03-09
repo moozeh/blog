@@ -209,7 +209,7 @@ public class Airplane extends Vehicle {
 
 하지만 실제로는 아래와 같이 정의가 된다. 완전 딴판이다.
 
-```
+```sql
 CREATE TABLE vehicle (
     id BIGINT PRIMARY KEY,
     dtype VARCHAR(31),

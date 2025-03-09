@@ -1,9 +1,15 @@
 ---
-title: "[Spring] Spring Data JPA는 기존 JPA와 뭐가 다를까?"
+title: "[Spring JPA] Spring Data JPA는 기존 JPA와 뭐가 다를까?"
 date: 2025-01-31 23:18:07 +0900
-categories: [Backend, Spring]
-tags: [Spring, Database, JPA, Java]
-excerpt_separator: "<!-- more -->"
+categories:
+  - Backend
+  - Spring
+tags:
+  - Spring
+  - Database
+  - JPA
+  - Java
+excerpt_separator: <!-- more -->
 draft: true
 ---
 
