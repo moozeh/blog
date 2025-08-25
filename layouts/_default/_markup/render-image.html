@@ -1,0 +1,16 @@
+{{- $alt := .Text -}}
+{{- $destination := .Destination -}}
+{{- $isExternal := strings.HasPrefix $destination "http" -}}
+
+{{- if not $isExternal -}}
+  {{/* target이 "assets"이므로 바로 파일명을 찾습니다. */}}
+  {{- $image := resources.Get (strings.TrimPrefix "/" $destination) -}}
+
+  {{- if $image -}}
+    <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}" loading="lazy">
+  {{- else -}}
+    <p style="color: red;">Asset not found: {{ $destination }}</p>
+  {{- end -}}
+{{- else -}}
+  <img src="{{ $destination | safeURL }}" alt="{{ $alt }}" loading="lazy">
+{{- end -}}
